@@ -1,0 +1,28 @@
+-muwx
+-i C:\Users\Yuzuki\AppData\Local\arduino\sketches\88F57294B5C6608F478CC3ECDD2F8A2E/Akari-NEW_Firmware.ino.elf
+-M
+-X 0x036c
+-C 0x3800
+-b HOME = 0x0000
+-b XSEG = 0x0094
+-b PSEG = 0x0094
+-b ISEG = 0x0000
+-b BSEG = 0x0000
+-k C:\Users\Yuzuki\AppData\Local\arduino\sketches\88F57294B5C6608F478CC3ECDD2F8A2E
+-k C:\Users\Yuzuki\AppData\Local\Arduino15\packages\CH55xDuino\tools\sdcc\build.13407_4/lib/large_int_calc_stack_auto
+-l C:\Users\Yuzuki\AppData\Local\arduino\sketches\88F57294B5C6608F478CC3ECDD2F8A2E/optionalLink.lib
+-l C:\Users\Yuzuki\AppData\Local\arduino\sketches\88F57294B5C6608F478CC3ECDD2F8A2E/..\..\cores\910fc64098c4b9d508bbd45b2249fda8\core.lib
+-l mcs51
+-l libsdcc
+-l liblong
+-l liblonglong
+-l libint
+-l libfloat
+C:\Users\Yuzuki\AppData\Local\arduino\sketches\88F57294B5C6608F478CC3ECDD2F8A2E\sketch\Akari-NEW_Firmware.ino.cpp.rel
+C:\Users\Yuzuki\AppData\Local\arduino\sketches\88F57294B5C6608F478CC3ECDD2F8A2E\sketch\PN532.c.rel
+C:\Users\Yuzuki\AppData\Local\arduino\sketches\88F57294B5C6608F478CC3ECDD2F8A2E\sketch\PN532_HSU.c.rel
+C:\Users\Yuzuki\AppData\Local\arduino\sketches\88F57294B5C6608F478CC3ECDD2F8A2E\sketch\USBconstant.c.rel
+C:\Users\Yuzuki\AppData\Local\arduino\sketches\88F57294B5C6608F478CC3ECDD2F8A2E\sketch\USBhandler.c.rel
+C:\Users\Yuzuki\AppData\Local\arduino\sketches\88F57294B5C6608F478CC3ECDD2F8A2E\libraries\WS2812\WS2812.c.rel
+
+-e
