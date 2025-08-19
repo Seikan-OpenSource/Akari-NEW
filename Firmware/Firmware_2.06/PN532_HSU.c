@@ -73,7 +73,7 @@ int8_t pn532_writeCommand(const uint8_t *header, uint8_t hlen, const uint8_t *bo
     for (uint8_t i = 0; i < hlen; i++)
     {
         sum += header[i];
-
+        //USBSerial_write(header[i]);
         //DMSG_HEX(header[i]);
     }
 
@@ -85,12 +85,14 @@ int8_t pn532_writeCommand(const uint8_t *header, uint8_t hlen, const uint8_t *bo
     for (uint8_t i = 0; i < blen; i++)
     {
         sum += body[i];
-
+        //USBSerial_write(body[i]);
         //DMSG_HEX(body[i]);
     }
 
     uint8_t checksum = ~sum + 1; // checksum of TFI + DATA
     Serial1_write(checksum);
+    //USBSerial_write(checksum);
+    //USBSerial_flush();
     Serial1_write((uint8_t)(PN532_POSTAMBLE));
 
     return pn532_readAckFrame();

@@ -144,13 +144,14 @@ extern uint32_t pn532_getFirmwareVersion(void);
 extern bool pn532_setPassiveActivationRetries(uint8_t maxRetries);
 
 // ISO14443A functions
-extern bool pn532_readPassiveTargetID(uint8_t cardbaudrate, uint8_t *uid, uint8_t *uidLength, uint16_t timeout);
+extern bool pn532_readPassiveTargetID(uint16_t timeout);
 
 // Mifare Classic functions
-extern uint8_t pn532_mifareclassic_AuthenticateBlock(uint8_t *uid, uint8_t uidLen, uint32_t blockNumber, uint8_t keyNumber, uint8_t *keyData);
-extern uint8_t pn532_mifareclassic_ReadDataBlock(uint8_t blockNumber, uint8_t *data);
+extern int8_t pn532_mifareclassic_AuthenticateBlock(uint8_t uidLen);
+extern uint8_t pn532_mifareclassic_ReadDataBlock();
 
 // FeliCa Functions
-extern int8_t pn532_felica_Polling(uint16_t systemCode, uint8_t requestCode, uint8_t *idm, uint8_t *pmm, uint16_t *systemCodeResponse, uint16_t timeout);
-
+extern int8_t pn532_felica_Polling(uint16_t timeout);
+extern uint8_t pn532_mifareclassic_WriteDataBlock();
+extern int8_t pn532_felica_ReadWithoutEncryption();
 #endif
